@@ -1,3 +1,1 @@
 # teamProject
-
-"Oa"
