@@ -33,7 +33,7 @@ function Login(props){
     return (
         <div className='login-component'>
         <form onSubmit={(e)=>{submitForm(e)}}>
-            <p>Log in with your credentials</p>
+            <p>Sign in to your account</p>
             <div className='login-comoponent-inputHolder'>
                 <label htmlFor='email'>Email:</label>
                 <input id='email' name='email'></input>

@@ -4,7 +4,6 @@ import Authentication from "./Components/Authentication/Authentication";
 import MyContext from "./context";
 
 import Header from "./Components/MainSections/Header";
-import Footer from "./Components/MainSections/Footer";
 import Content from "./Components/MainSections/Content";
 
 function App() {
@@ -23,11 +22,10 @@ function App() {
       !authenticated ? <Authentication props={{setAuthenticated}}/>
       :
       <>
-        <Header />
+        {authenticated=='unauthenticated' ? <Header isAuthenticated={false}/> : <Header isAuthenticated={true}/>}
 
-        <Content />
+        {authenticated=='unauthenticated' ? <Content isAuthenticated={false}/> : <Content isAuthenticated={true}/>}
 
-        <Footer />
       </>
       }
     </div>

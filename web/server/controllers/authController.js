@@ -39,7 +39,7 @@ exports.signup = (req,res,next)=>{
         res.json(`Password length must be greater than 7`);
         return;
     }
-
+    
     // firebase authentication
     const localAuth = getAuth(app);
     (function createUser(){

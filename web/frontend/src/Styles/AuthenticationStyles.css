@@ -1,38 +1,75 @@
 .authentication{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(177, 235, 177);
+    background-color: #1e1e1e24;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
+
 }
 .authentication > div{
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
-.authentication > div > p{
-    color: azure;
-    font-size: 2rem;
-    width: 30vw;
+.name{
+    background: linear-gradient(#0EA6D6, #00407A);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
     font-weight: bold;
     text-align: center;
-
+    margin-top: 0;
+}
+.name img{
+    transform: rotate(90deg);
+    margin-left: -6px;
+    height: 25px;
+    margin-bottom: 7px;
+}
+.twitter-img{
+    width: 200px;
+    margin-top: -65px;
+}
+.auth-seperation{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.dash{
+    width: 40%;
+    height: 3px;
+    background-color: black;
+}
+.welcome-text{
+    background: linear-gradient(#0EA6D6, #00407A);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    transform: matrix(1 2 3 4 5 6);
+}
+.authentication > div > svg{
+    width: 90%;
+    max-width: 700px;
+    margin-top: -100px;
 }
 .auth-inputs-holder{
-    background-color:rgba(95, 158, 160, 0.5);
     max-width: 30vw;
     min-width: 400px;
-    height: 300px;
+    height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    border-radius: 10px;
-    box-shadow: 10px 10px 20px 3px rgba(102, 102, 102, 0.736);
 
     transition: 0.5s all;
 }
@@ -42,17 +79,33 @@
     font-size: 1.5rem;
     border-radius: 13px;
     padding: 5px;
-    background-color:azure;
+    background-color:rgba(14, 166, 214, 0.07);
+    color: rgb(77, 77, 77);
     font-weight: bold;
-    border: 2px solid black;
-    border-bottom: 5px solid black;
-    width: 80%;
-    margin: 0 30px;
+    width: 100%;
+    padding: 15px 25px;
 
     transition: 0.1s all;
 }
 .auth-inputs-holder button:focus{
-    border-bottom: 2px solid black;
+    transform: scale(1.1);
+}
+.signup{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 1.15rem !important;
+}
+.signup-btn{
+    background-color: rgba(0, 0, 0, 0) !important;
+    width: auto !important;
+    padding: 5px !important;
+}
+.signup-btn:focus{
+    transform: scale(1) !important;
+    color: gray;
 }
 .auth-goBack-btn{
     border-radius: 0 !important;
@@ -61,13 +114,13 @@
     font-size: 1rem !important;
     color: rgb(0, 0, 0);
 }
-
-
-
 .signup-component,
 .login-component{
     width: 100%;
     height: 100%;
+    background: linear-gradient(300deg, #5799F7 11.43%, #44B5E1 59.09%, #2AC9D7 84.63%);
+    mix-blend-mode: normal;
+    border-radius: 50px;
 }
 
 .signup-component form{
@@ -76,6 +129,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 2.5fr 0.5fr 1fr 1fr;
+
 }
 .login-component form{
     width: 100%;
@@ -83,6 +137,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1.5fr 0.5fr 1fr;
+}
+.login-component form p:first-child{
+    background: #FFF4F4;
+    opacity: 0.5;
+    border-radius: 50px;
+    padding: 10px;
+    width: 80%;
+    margin: 30px 10% 0 10%;
 }
 
 .signup-component form > p:nth-child(1),
@@ -124,17 +186,34 @@
     border-radius: 4px;
     padding: 5px;
     outline: 1px solid gray;
-    background-color: rgb(224, 238, 238);
+    background: rgba(229, 229, 229, 0.23);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+
 }
-.login-comoponent-inputHolder input{
+.login-component input{
     outline: none;
     border: none;
 
     border-radius: 4px;
     padding: 5px;
     outline: 1px solid gray;
-    background-color: rgb(224, 238, 238);
     margin: 0 10px;
+
+    background: rgba(229, 229, 229, 0.23);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px;
+
+}
+input:-webkit-autofill{
+    background: rgba(229, 229, 229, 0.23);
+
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
 }
 .login-comoponent-inputHolder label{
     margin: 20px 10px 0 10px;
@@ -190,6 +269,9 @@
     }
 }
 @media (max-width: 390px){
+    .twitter-img{
+        width: 100px;
+    }
     .auth-inputs-holder{
         width: 100%;
         min-width: 100%;
